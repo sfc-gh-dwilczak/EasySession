@@ -1,12 +1,12 @@
-import os
-#import toml
-#from snowflake.snowpark.session import Session
+import toml
+from snowflake.snowpark.session import Session
 
-#HOME = os.path.expanduser('~')
-#CREDS_PATH = os.path.join(HOME, '.snowauth', 'creds.conf')
 
-#with open(CREDS_PATH, 'r') as f:
-    #conf = toml.load(f)
+def connect(file_name,header):
+    with open(file_name, 'r') as f:
+        creds = toml.load(f)
 
-def connect(connection_name):
-    print(connection_name)
+    if not creds:
+        raise Exception('Connection Name not Found!')
+    
+    return Session.builder.configs(creds[header]).create()
