@@ -7,7 +7,7 @@ name = "snowauth"
 author="Branden Ciranni, Daniel Wilczak"
 
 dependencies = [
-    "snowflake-snowpark-python"
+    "snowflake-snowpark-python",
     "toml"
 ]
 
