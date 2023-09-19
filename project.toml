@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "snowauth"
+author="Branden Ciranni, Daniel Wilczak"
+
+dependencies = [
+    "snowflake-connector-python==3.2.0",
+    "snowflake-snowpark-python==1.8.0"
+]
+
+classifiers = [
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: MIT License"
+]
+
+dynamic = ["description", "version"]
+
+keywords = ["Snowflake","Connect"]
+
+readme = "README.md"
+
+requires-python = "<=3.10"
+
+[tool.setuptools.dynamic]
+version = {attr = "snowauth.__version__"}
