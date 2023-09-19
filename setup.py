@@ -8,5 +8,5 @@ setup(
     repository=
         "https://github.com/sfc-gh-bciranni/snowauth",
     summary=
-        "A package for the simple local management of snowpark for python connections.",
+        "A package for the simple local management of snowpark for python connections."
 )
