@@ -1,2 +1,2 @@
-# EasySession
-A python package to make adding your session variable easier.
+# Python package example.
+A package to show how to make a python package.
