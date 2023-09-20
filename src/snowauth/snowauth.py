@@ -11,10 +11,10 @@ def connect(header,file_name="creds.conf"):
         
         file_name - File name to get credentials from. Default - "creds.conf"
 
-
     Example:
         >>> import snowauth
         >>> session = snowauth.connect('example_connection')
+        >>> print(session)
         ...
         ... <snowflake.snowpark.session.Session: account=...>
     """
