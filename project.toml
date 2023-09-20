@@ -1,34 +1,3 @@
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
-
-[project]
-name = "snowauth"
-author="Branden Ciranni, Daniel Wilczak"
-
-dependencies = [
-    "snowflake-snowpark-python",
-    "toml"
-]
-
-classifiers = [
-    "Topic :: Printing",
-    "Development Status :: 5 - Production/Stable",
-    "License :: OSI Approved :: MIT License",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Operating System :: OS Independent",
-    "Intended Audience :: Developers",
-    "Typing :: Typed"
-]
-
-keywords = ["Snowpark","Snowflake"]
-
-license = {text = "mit"}
-readme = "README.md"
-
-requires-python = "<=3.10"
-
-[tool.setuptools.dynamic]
-version = {attr = "snowauth.__version__"}
