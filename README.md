@@ -3,7 +3,14 @@ A package for the simple local management of snowpark for python connections.
 
 # Example:
 
+
+
 ### Setup:
+Install the python package.
+```
+pip install snowauth
+```
+
 Create a file name ``creds.conf``.
 ```
 [connection]
