@@ -1,10 +1,10 @@
 # Snowauth.
 A package for the simple local management of snowpark for python connections.
 
-# Example:
+## Documentation 
+Documentation can be found here: [Wiki](https://sfc-gh-dwilczak.github.io/snowauth/)
 
-
-
+## Example:
 ### Setup:
 Install the python package.
 ```
