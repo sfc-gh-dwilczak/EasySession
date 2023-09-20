@@ -20,7 +20,7 @@ warehouse = "WAREHOUSE"
 import snowauth
 
 # creds.conf is the default. It can be change to whatever name you want.
-session = snowauth.connect('creds.conf','connection')
+session = snowauth.connect('connection','creds.conf')
 ```
 
 ### Output:
