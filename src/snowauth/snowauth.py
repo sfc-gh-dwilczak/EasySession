@@ -1,7 +1,6 @@
 import toml
 from snowflake.snowpark.session import Session
 
-
 def connect(header,file_name="creds.conf"):
     """
     Allows users to put configurations in a file with toml header
@@ -17,9 +16,9 @@ def connect(header,file_name="creds.conf"):
         >>> import snowauth
         >>> session = snowauth.connect('example_connection')
         ...
-        ... PUT EXAMPLE OUT HERE.
-        ...
+        ... <snowflake.snowpark.session.Session: account=...>
     """
+
     with open(file_name, 'r') as f:
         creds = toml.load(f)
 

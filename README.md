@@ -24,4 +24,6 @@ session = snowauth.connect('creds.conf','connection')
 ```
 
 ### Output:
-PUT OUTPUT HERE.
+```
+<snowflake.snowpark.session.Session: account=...>
+```
