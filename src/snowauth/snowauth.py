@@ -1,7 +1,12 @@
 import toml
+import os
 from snowflake.snowpark.session import Session
 
-def connect(header,file_name="creds.conf"):
+HOME = os.path.expanduser('~')
+CREDS_PATH = os.path.join(HOME, '.snowauth', 'snowflake.conf')
+
+
+def connect(header, file_path=CREDS_PATH):
     """
     Allows users to put configurations in a file with toml header
     and pull to generate a session variable in snowpark.
@@ -9,7 +14,7 @@ def connect(header,file_name="creds.conf"):
     Para:
         header - Header of the toml file section to read from.
         
-        file_name - File name to get credentials from. Default - "creds.conf"
+        file_path - File path to get credentials from. Default - "snowflake.conf"
 
     Example:
         >>> import snowauth
@@ -19,7 +24,8 @@ def connect(header,file_name="creds.conf"):
         ... <snowflake.snowpark.session.Session: account=...>
     """
 
-    with open(file_name, 'r') as f:
+
+    with open(file_path, 'r') as f:
         creds = toml.load(f)
 
     if not creds:

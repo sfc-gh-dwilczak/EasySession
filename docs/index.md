@@ -1,33 +1,52 @@
 # Welcome to SnowAuth Docs
 A package for the simple local management of snowpark for python connections.
 
-# Example:
-### Setup:
-Install the python package.
+## Example
+
+```python
+import snowauth
+
+session = snowauth.connect('example_connection')
+```
+
+
+## Setup
+
 ```
 pip install snowauth
 ```
 
-Create a file name ``creds.conf``.
-```
-[connection]
-account   = "ACCOUNT"
-user      = "USER"
-password  = "PASSWORD"
-role      = "ROLE"
-warehouse = "WAREHOUSE"
-```
+After installing `snowauth`, set up your snowflake credentials:
 
-### Usage
+1. Create the `.snowauth` folder and the `snowflake.conf` file that will store different snowflake credentials.
+    ```
+    mkdir ~/.snowauth
 
-```py
+    mkfile ~/.snowauth/snowflake.conf
+    ```
+2. Add your snowflake credentials.
+
+    Example:
+    ```toml
+    [example_connection]
+    account = "ACCOUNT_NAME"
+    user = "USER"
+    password = "PASSWORD"
+    role = "ACCOUNTADMIN"
+    warehouse = "EXAMPLE_WH"
+    ```
+
+
+
+Then, to create a snowpark session in 1 line.
+
+```python
 import snowauth
 
-# creds.conf is the default. It can be change to whatever name you want.
-session = snowauth.connect('connection','creds.conf')
-
-print(session)
+session = snowauth.connect('example_connection')
 ```
+
+
 
 ### Output:
 ```
